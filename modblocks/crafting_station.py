@@ -6,27 +6,27 @@ class BaseCraftingStation():
 
     def __init__(self):
         """Initialize a new generic crafting station."""
-        self.__base_speed: float = 1.0
-        self.__base_prod: float = 1.0
-        self.__module_slots: int = 0
-        self.__modules = [None] * self.__module_slots
+        self._base_speed: float = 1.0
+        self._base_prod: float = 1.0
+        self._module_slots: int = 0
+        self._modules = [None] * self._module_slots
 
     @property
     def modules(self):
         """Return list of current modules."""
-        return list(self.__modules)
+        return list(self._modules)
 
     @modules.setter
     def modules(self, modules: tuple) -> None:
         """Set all module slots, overwriting existing slots."""
         n_modules = len(modules)
-        if n_modules > self.__module_slots:
-            raise ValueError(f"This node takes at most {self.__module_slots} modules")
-        self.__modules = list(modules) + [None] * (n_modules - self.__module_slots)
+        if n_modules > self._module_slots:
+            raise ValueError(f"This node takes at most {self._module_slots} modules")
+        self._modules = list(modules) + [None] * (n_modules - self._module_slots)
 
     def add_module(self, module: str, index: int):
         """Add a module at a specific slot."""
-        self.__module_slots[index] = module
+        self._module_slots[index] = module
 
     @property
     def crafting_speed(self) -> float:
@@ -37,8 +37,8 @@ class BaseCraftingStation():
         """
         # TODO: Include beacons
         # TODO: Include science bonus (if applicable)
-        speed_factor = 1 + sum(module["speed"] for module in self.__modules)
-        return self.__base_speed * speed_factor
+        speed_factor = 1 + sum(module["speed"] for module in self._modules)
+        return self._base_speed * speed_factor
 
     @property
     def productivity(self) -> float:
@@ -48,5 +48,5 @@ class BaseCraftingStation():
         given base productivity, modules etc.
         """
         # TODO: Include science bonus (if applicable)
-        prod_modules = sum(module["productivity"] for module in self.__modules)
-        return self.__base_prod * prod_modules
+        prod_modules = sum(module["productivity"] for module in self._modules)
+        return self._base_prod * prod_modules
