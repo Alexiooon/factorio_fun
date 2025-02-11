@@ -1,0 +1,357 @@
+{
+    "Stone brick": {
+        "input": {
+            "Stone": 2
+        },
+        "output": {
+            "Stone brick": 1
+        },
+        "time": 3.2
+    },
+    "Copper cable": {
+        "input": {
+            "Copper plate": 1
+        },
+        "output": {
+            "Copper cable": 2
+        },
+        "time": 0.5
+    },
+    "Electronic circuit": {
+        "input": {
+            "Copper cable": 3,
+            "Iron plate": 1
+        },
+        "output": {
+            "Electronic circuit": 1
+        },
+        "time": 0.5
+    },
+    "Advanced circuit": {
+        "input": {
+            "Copper cable": 4,
+            "Electronic circuit": 2,
+            "Plastic bar": 2
+        },
+        "output": {
+            "Advanced circuit": 1
+        },
+        "time": 6
+    },
+    "Processing unit": {
+        "input": {
+            "Advanced circuit": 2,
+            "Electronic circuit": 20,
+            "Sulfuric acid": 5
+        },
+        "output": {
+            "Processing unit": 1
+        },
+        "time": 10
+    },
+
+    "Iron gear wheel": {
+        "input": {
+            "Iron plate": 2
+        },
+        "output": {
+            "Iron gear wheel": 1
+        },
+        "time": 0.5
+    },
+    "Iron stick": {
+        "input": {
+            "Iron plate": 1
+        },
+        "output": {
+            "Iron gear wheel": 2
+        },
+        "time": 0.5
+    },
+
+
+    "Inserter": {
+        "input": {
+            "Electronic circuit": 1,
+            "Iron gear wheel": 1,
+            "Iron plate": 1
+        },
+        "output": {
+            "Inserter": 1
+        },
+        "time": 0.5
+    },
+    "Transport belt": {
+        "input": {
+            "Iron gear wheel": 1,
+            "Iron plate": 1
+        },
+        "output": {
+            "Transport belt": 1
+        },
+        "time": 0.5
+    },
+
+    "Grenade": {
+        "input": {
+            "Coal": 10,
+            "Iron plate": 5
+        },
+        "output": {
+            "Grenade": 1
+        },
+        "time": 8
+    },
+    "Firearm magazine": {
+        "input": {
+            "Iron plate": 4
+        },
+        "output": {
+            "Firearm magazine": 1
+        },
+        "time": 1
+    },
+    "Piercing rounds magazine": {
+        "input": {
+            "Copper plate": 5,
+            "Firearm magazine": 1,
+            "Steel plate": 1
+        },
+        "output": {
+            "Piercing rounds magazine": 1
+        },
+        "time": 3
+    },
+    "Wall": {
+        "input": {
+            "Stone brick": 5
+        },
+        "output": {
+            "Wall": 1
+        },
+        "time": 0.5
+    },
+
+    "Sulfur": {
+        "input": {
+            "Petroleum": 30,
+            "Water": 30
+        },
+        "output": {
+            "Sulfur": 2
+        },
+        "time": 1
+    },
+    "Sulfuric acid": {
+        "input": {
+            "Iron plate": 1,
+            "Sulfur": 5,
+            "Water": 100
+        },
+        "output": {
+            "Sulfuric acid": 50
+        },
+        "time": 1
+    },
+    "Battery": {
+        "input": {
+            "Copper plate": 1,
+            "Iron plate": 1,
+            "Sulfuric acid": 20
+        },
+        "output": {
+            "Battery": 1
+        },
+        "time": 1
+    },
+    "Plastic bar": {
+        "input": {
+            "Coal": 1,
+            "Petroleum": 20
+        },
+        "output": {
+            "Plastic bar": 2
+        },
+        "time": 1
+    },
+
+    "Engine unit": {
+        "input": {
+            "Iron gear wheel": 1,
+            "Pipe": 2,
+            "Steel plate": 1
+        },
+        "output": {
+            "Engine unit": 1
+        },
+        "time": 10
+    },
+    "Electric engine unit": {
+        "input": {
+            "Electronic circuit": 2,
+            "Engine unit": 1,
+            "Lubricant": 15
+        },
+        "output": {
+            "Electric engine unit": 1
+        },
+        "time": 10
+    },
+    "Flying robot frame": {
+        "input": {
+            "Battery": 2,
+            "Electric engine unit": 1,
+            "Electronic circuit": 3,
+            "Steel plate": 1
+        },
+        "output": {
+            "Flying robot frame": 1
+        },
+        "time": 20
+    },
+    "Low density structure": {
+        "input": {
+            "Copper plate": 20,
+            "Plastic bar": 5,
+            "Steel plate": 2
+        },
+        "output": {
+            "Low density structure": 1
+        },
+        "time": 15
+    },
+
+    "Rail": {
+        "input": {
+            "Iron stick": 1,
+            "Steel plate": 1,
+            "Stone": 1
+        },
+        "output": {
+            "Rail": 2
+        },
+        "time": 0.5
+    },
+    "Electric furnace": {
+        "input": {
+            "Advanced circuit": 5,
+            "Steel plate": 10,
+            "Stone brick": 10
+        },
+        "output": {
+            "Electric furnace": 1
+        },
+        "time": 5
+    },
+    "Productivity module": {
+        "input": {
+            "Electronic circuit": 5,
+            "Advanced circuit": 5
+        },
+        "output": {
+            "Productivity module": 1
+        },
+        "time": 15
+    },
+
+
+    "Automation science pack": {
+        "input": {
+            "Copper plate": 1,
+            "Iron gear wheel": 1
+        },
+        "output": {
+            "Automation science pack": 1
+        },
+        "time": 5.0
+    },
+    "Logistic science pack": {
+        "input": {
+            "Inserter": 1,
+            "Transport belt": 1
+        },
+        "output": {
+            "Logistic science pack": 1
+        },
+        "time": 6.0
+    },
+    "Military science pack": {
+        "input": {
+            "Grenade": 1,
+            "Piercing rounds magazine": 1,
+            "Wall": 2
+        },
+        "output": {
+            "Military science pack": 2
+        },
+        "time": 10.0
+    },
+    "Chemical science pack": {
+        "input": {
+            "Advanced circuit": 3,
+            "Engine unit": 2,
+            "Sulfur": 1
+        },
+        "output": {
+            "Chemical science pack": 2
+        },
+        "time": 24.0
+    },
+    "Production science pack": {
+        "input": {
+            "Electric furnace": 1,
+            "Productivity module": 1,
+            "Rail": 30
+        },
+        "output": {
+            "Production science pack": 3
+        },
+        "time": 21.0
+    },
+    "Utility science pack": {
+        "input": {
+            "Flying robot frame": 1,
+            "Low density structure": 3,
+            "Processing unit": 2
+        },
+        "output": {
+            "Utility science pack": 3
+        },
+        "time": 21.0
+    },
+    "Space science pack": {
+        "input": {
+            "Carbon": 1,
+            "Ice": 1,
+            "Iron plate": 2
+        },
+        "output": {
+            "Space science pack": 5
+        },
+        "time": 15.0
+    },
+    "Metallurgic science pack": {
+        "input": {
+        },
+        "output": {
+            "Metallurgic science pack": 1
+        },
+        "time": 10.0
+    },
+    "Agricultural science pack": {
+        "input": {
+        },
+        "output": {
+            "Agricultural science pack": 1
+        },
+        "time": 4.0
+    },
+    "Electromagnetic science pack": {
+        "input": {
+        },
+        "output": {
+            "Electromagnetic science pack": 1
+        },
+        "time": 10.0
+    }
+}
