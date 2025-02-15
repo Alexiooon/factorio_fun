@@ -14,6 +14,8 @@ what is explicitly specified. Otherwise things would be a mess...
 Future work might add the possibility to create local copies to e.g. compare different levels.
 """
 
+from .constants import QualityLevel
+
 # Valid types of productivity research
 PRODUCTIVITY_OPTIONS = (
     "Asteroid",
@@ -37,7 +39,7 @@ class ScienceSingleton():
 
         def __init__(self) -> None:
             """Init."""
-            self.max_quality = 2
+            self.max_quality = QualityLevel.RARE
             self._productivity_dict = {research_type: 0 for research_type in PRODUCTIVITY_OPTIONS}
 
         @staticmethod
