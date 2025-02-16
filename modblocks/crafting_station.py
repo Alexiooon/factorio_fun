@@ -1,5 +1,6 @@
 """Base object for generic crafting station."""
 
+from .beacon import Beacon
 from .modules import Module
 from .recipe import Recipe
 from .science import GlobalScienceProgress
@@ -8,18 +9,25 @@ from .science import GlobalScienceProgress
 class BaseCraftingStation():
     """Basic class for crafting stations."""
 
-    def __init__(self):
+    def __init__(
+            self,
+            recipe: Recipe | None = None,
+            beacon: Beacon | None = None
+        ):
         """Initialize a new generic crafting station."""
         # Crafting station parameters
         self._base_speed: float = 1.0
         self._base_prod: float = 1.0
 
         # Modules
-        self._module_slots: int = 0
+        self._module_slots = 0
         self._modules: list[Module] = [None] * self._module_slots
 
+        # Beacon
+        self.beacon = beacon
+
         # Crafting recipe
-        self.recipe: Recipe | None = None
+        self.recipe = recipe
 
     @property
     def modules(self):
@@ -45,8 +53,9 @@ class BaseCraftingStation():
         Note that this is a property without a setter, since its calculated automatically
         given base speed, modules etc.
         """
-        # TODO: Include beacons
-        speed_factor = 1 + sum(module.speed for module in self._modules)
+        beacon_speed = 0 if not self.beacon else self.beacon.output["speed"]
+        module_speed = sum(module.speed for module in self._modules if module)
+        speed_factor = 1 + module_speed + beacon_speed
         return self._base_speed * speed_factor
 
     @property

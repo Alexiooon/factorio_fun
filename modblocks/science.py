@@ -107,7 +107,7 @@ class ScienceSingleton():
              - ValueError: If either of the arguments are invalid
             """
             self._validate_arguments(science)
-            return self._productivity_dict[science]
+            return self._productivity_dict.get(science, 0)  # Return 0 if it doesn't exist
 
     # Storage of the instance reference
     __instance = None
