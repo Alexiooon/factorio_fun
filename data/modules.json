@@ -1,6 +1,5 @@
-[
-    {
-        "name": "Efficiency module",
+{
+    "Efficiency module": {
         "alias": ["efficiency 1", "efficiency-module-1"],
         "energy_consumption": [-0.30, -0.39, -0.48, -0.57, -0.75],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -8,8 +7,7 @@
         "quality": [0.00, 0.00, 0.00, 0.00, 0.00],
         "speed": [0.00, 0.00, 0.00, 0.00, 0.00]
     },
-    {
-        "name": "Efficiency module 2",
+    "Efficiency module 2": {
         "alias": ["efficiency 2", "efficiency-module-2"],
         "energy_consumption": [-0.40, -0.52, -0.64, -0.76, -1.00],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -17,8 +15,7 @@
         "quality": [0.00, 0.00, 0.00, 0.00, 0.00],
         "speed": [0.00, 0.00, 0.00, 0.00, 0.00]
     },
-    {
-        "name": "Efficiency module 3",
+    "Efficiency module 3": {
         "alias": ["efficiency 3", "efficiency-module-3"],
         "energy_consumption": [-0.50, -0.65, -0.80, -0.95, -1.25],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -27,8 +24,7 @@
         "speed": [0.00, 0.00, 0.00, 0.00, 0.00]
     },
 
-    {
-        "name": "Productivity module",
+    "Productivity module": {
         "alias": ["productivity 1", "productivity-module-1"],
         "energy_consumption": [0.40, 0.40, 0.40, 0.40, 0.40],
         "pollution": [0.05, 0.05, 0.05, 0.05, 0.05],
@@ -36,8 +32,7 @@
         "quality": [0.00, 0.00, 0.00, 0.00, 0.00],
         "speed": [-0.05, -0.05, -0.05, -0.05, -0.05]
     },
-    {
-        "name": "Productivity module 2",
+    "Productivity module 2": {
         "alias": ["productivity 2", "productivity-module-2"],
         "energy_consumption": [0.60, 0.60, 0.60, 0.60, 0.60],
         "pollution": [0.07, 0.07, 0.07, 0.07, 0.07],
@@ -45,8 +40,7 @@
         "quality": [0.00, 0.00, 0.00, 0.00, 0.00],
         "speed": [-0.10, -0.10, -0.10, -0.10, -0.10]
     },
-    {
-        "name": "Productivity module 3",
+    "Productivity module 3": {
         "alias": ["productivity 3", "productivity-module-3"],
         "energy_consumption": [0.80, 0.80, 0.80, 0.80, 0.80],
         "pollution": [0.10, 0.10, 0.10, 0.10, 0.10],
@@ -55,8 +49,7 @@
         "speed": [-0.15, -0.15, -0.15, -0.15, -0.15]
     },
 
-    {
-        "name": "Quality module",
+    "Quality module": {
         "alias": ["quality 1", "quality-module-1"],
         "energy_consumption": [0.00, 0.00, 0.00, 0.00, 0.00],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -64,8 +57,7 @@
         "quality": [0.01, 0.013, 0.016, 0.019, 0.025],
         "speed": [-0.05, -0.05, -0.05, -0.05, -0.05]
     },
-    {
-        "name": "Quality module 2",
+    "Quality module 2": {
         "alias": ["quality 2", "quality-module-2"],
         "energy_consumption": [0.00, 0.00, 0.00, 0.00, 0.00],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -73,8 +65,7 @@
         "quality": [0.02, 0.026, 0.032, 0.038, 0.05],
         "speed": [-0.05, -0.05, -0.05, -0.05, -0.05]
     },
-    {
-        "name": "Quality module 3",
+    "Quality module 3": {
         "alias": ["quality 3", "quality-module-3"],
         "energy_consumption": [0.00, 0.00, 0.00, 0.00, 0.00],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -83,8 +74,7 @@
         "speed": [-0.05, -0.05, -0.05, -0.05, -0.05]
     },
 
-    {
-        "name": "Speed module",
+    "Speed module": {
         "alias": ["speed 1", "speed-module-1"],
         "energy_consumption": [0.50, 0.50, 0.50, 0.50, 0.50],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -92,8 +82,7 @@
         "quality": [-0.01, -0.01, -0.01, -0.01, -0.01],
         "speed": [0.20, 0.26, 0.32, 0.38, 0.50]
     },
-    {
-        "name": "Speed module 2",
+    "Speed module 2": {
         "alias": ["speed 2", "speed-module-2"],
         "energy_consumption": [0.60, 0.60, 0.60, 0.60, 0.60],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -101,8 +90,7 @@
         "quality": [-0.015, -0.015, -0.015, -0.015, -0.015],
         "speed": [0.30, 0.39, 0.48, 0.57, 0.75]
     },
-    {
-        "name": "Speed module 3",
+    "Speed module 3": {
         "alias": ["speed 3", "speed-module-3"],
         "energy_consumption": [0.70, 0.70, 0.70, 0.70, 0.70],
         "pollution": [0.00, 0.00, 0.00, 0.00, 0.00],
@@ -110,4 +98,4 @@
         "quality": [-0.025, -0.025, -0.025, -0.025, -0.025],
         "speed": [0.50, 0.65, 0.80, 0.95, 1.25]
     }
-]
+}

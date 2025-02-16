@@ -1,11 +1,8 @@
 """Base object for generic crafting station."""
-import json
-import os
 
+from .modules import Module
 from .recipe import Recipe
-
-with open(os.path.join("data", "recipes.json"), "r", encoding="utf8") as _file:
-    RECIPES = json.load(_file)
+from .science import GlobalScienceProgress
 
 
 class BaseCraftingStation():
@@ -19,7 +16,7 @@ class BaseCraftingStation():
 
         # Modules
         self._module_slots: int = 0
-        self._modules = [None] * self._module_slots
+        self._modules: list[Module] = [None] * self._module_slots
 
         # Crafting recipe
         self.recipe: Recipe | None = None
@@ -49,8 +46,7 @@ class BaseCraftingStation():
         given base speed, modules etc.
         """
         # TODO: Include beacons
-        # TODO: Include science bonus (if applicable)
-        speed_factor = 1 + sum(module["speed"] for module in self._modules)
+        speed_factor = 1 + sum(module.speed for module in self._modules)
         return self._base_speed * speed_factor
 
     @property
@@ -60,9 +56,9 @@ class BaseCraftingStation():
         Note that this is a property without a setter, since its calculated automatically
         given base productivity, modules etc.
         """
-        # TODO: Include science bonus (if applicable)
-        prod_modules = sum(module["productivity"] for module in self._modules if module is not None)
-        return self._base_prod + (1 * prod_modules)
+        prod_science = GlobalScienceProgress.get_research_level(self.recipe.name) / 10  # 10% / level
+        prod_modules = sum(module.productivity for module in self._modules if module is not None)
+        return self._base_prod + prod_modules + prod_science
 
     @property
     def input(self) -> dict:
