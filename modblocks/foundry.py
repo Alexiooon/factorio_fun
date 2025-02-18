@@ -24,3 +24,7 @@ class Foundry(BaseCraftingStation):
         self._modules = [None] * self._module_slots
         if modules:
             self.modules = modules
+
+    def __str__(self) -> str:
+        """String representation i.e. name of the crafting station."""
+        return "Foundry"
