@@ -28,7 +28,7 @@ class BaseCraftingStation:
     @property
     def modules(self):
         """Return list of current modules."""
-        return list(self._modules)
+        return self._modules
 
     @modules.setter
     def modules(self, modules: tuple) -> None:
@@ -36,11 +36,16 @@ class BaseCraftingStation:
         n_modules = len(modules)
         if n_modules > self._module_slots:
             raise ValueError(f"This node takes at most {self._module_slots} modules")
-        self._modules = list(modules) + [None] * (n_modules - self._module_slots)
+        if not all(isinstance(x, Module) for x in modules):
+            raise TypeError("Modules must be an iterable of Module class instances.")
+        self._modules = list(modules) + [None] * (self._module_slots - n_modules)
 
-    def add_module(self, module: str, index: int):
+    def add_module(self, module: Module, index: int):
         """Add a module at a specific slot."""
-        self._module_slots[index] = module
+        if not isinstance(module, Module):
+            raise TypeError("Module must be an instance of the Module class.")
+
+        self._modules[index] = module
 
     @property
     def crafting_speed(self) -> float:
