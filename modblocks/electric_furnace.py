@@ -1,4 +1,5 @@
 """Module for furnace."""
+
 from .beacon import Beacon
 from .crafting_station import BaseCraftingStation
 from .recipe import Recipe
@@ -10,12 +11,12 @@ class ElectricFurnace(BaseCraftingStation):
     """Electric furnace class."""
 
     def __init__(
-            self,
-            quality: int,
-            recipe: Recipe | None = None,
-            modules: tuple | None = None,
-            beacon: Beacon | None = None
-        ):
+        self,
+        quality: int,
+        recipe: Recipe | None = None,
+        modules: tuple | None = None,
+        beacon: Beacon | None = None,
+    ):
         """Initialize a new Electric furnace."""
         super().__init__(recipe=recipe, beacon=beacon)
         self._base_speed: float = SPEED_BY_QUALITY[quality]

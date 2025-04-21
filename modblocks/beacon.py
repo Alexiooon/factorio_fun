@@ -5,7 +5,7 @@ from .modules import Module
 EFFICIENCY_BY_QUALITY = (1.5, 1.7, 1.9, 2.1, 2.5)
 
 
-class Beacon():
+class Beacon:
     """Beacon emitting modules at high efficiency."""
 
     def __init__(self, quality: int, modules: tuple | None = None, quantity: int = 1):
@@ -37,9 +37,10 @@ class Beacon():
     @property
     def output(self) -> dict:
         """Effective output."""
-        net_effect = self._transmission_efficiency * self.quantity ** 0.5
+        net_effect = self._transmission_efficiency * self.quantity**0.5
         output = {
-            "energy_consumption": net_effect * sum(module.energy_consumption for module in self._modules if module),
+            "energy_consumption": net_effect
+            * sum(module.energy_consumption for module in self._modules if module),
             "pollution": net_effect * sum(module.pollution for module in self._modules if module),
             "quality": net_effect * sum(module.quality for module in self._modules if module),
             "speed": net_effect * sum(module.speed for module in self._modules if module),

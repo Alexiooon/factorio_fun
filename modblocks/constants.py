@@ -9,6 +9,7 @@ class QualityLevel(IntEnum):
     These are designed for ease of use with iterables where each element is a
     quality level, in order.
     """
+
     NORMAL = 0
     UNCOMMON = 1
     RARE = 2

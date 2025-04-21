@@ -30,7 +30,7 @@ def main():
     """Main entry point for the application."""
     size = MAX_QUALITY_EPIC
     material_fractions = np.zeros((size, 1))
-    material_fractions[1] = 1000.
+    material_fractions[1] = 1000.0
     final_output = np.zeros_like(material_fractions)
     q_recycler = get_quality_matrix(0.047 * 4, size)
     q_em_plant = get_quality_matrix(0.047 * 5, size)

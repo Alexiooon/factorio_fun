@@ -6,14 +6,10 @@ from .recipe import Recipe
 from .science import GlobalScienceProgress
 
 
-class BaseCraftingStation():
+class BaseCraftingStation:
     """Basic class for crafting stations."""
 
-    def __init__(
-            self,
-            recipe: Recipe | None = None,
-            beacon: Beacon | None = None
-        ):
+    def __init__(self, recipe: Recipe | None = None, beacon: Beacon | None = None):
         """Initialize a new generic crafting station."""
         # Crafting station parameters
         self._base_speed: float = 1.0
@@ -65,14 +61,16 @@ class BaseCraftingStation():
         Note that this is a property without a setter, since its calculated automatically
         given base productivity, modules etc.
         """
-        prod_science = GlobalScienceProgress.get_research_level(self.recipe.name) / 10  # 10% / level
+        prod_science = (
+            GlobalScienceProgress.get_research_level(self.recipe.name) / 10
+        )  # 10% / level
         prod_modules = sum(module.productivity for module in self._modules if module is not None)
         return self._base_prod + prod_modules + prod_science
 
     @property
     def input(self) -> dict:
         """Get the input items and their quantities per second."""
-        base_input = (self.crafting_speed / self.recipe.time)
+        base_input = self.crafting_speed / self.recipe.time
         return {name: base_input * quantity for name, quantity in self.recipe.input.items()}
 
     @property

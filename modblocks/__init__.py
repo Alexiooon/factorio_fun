@@ -16,5 +16,5 @@ __all__ = [
     "ElectricFurnace",
     "ElectromagneticPlant",
     "Foundry",
-    "GlobalScienceProgress"
+    "GlobalScienceProgress",
 ]

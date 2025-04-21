@@ -1,4 +1,5 @@
 """Module for foundries."""
+
 from .beacon import Beacon
 from .crafting_station import BaseCraftingStation
 from .recipe import Recipe
@@ -10,12 +11,12 @@ class Foundry(BaseCraftingStation):
     """Foundry class."""
 
     def __init__(
-            self,
-            quality: int,
-            recipe: Recipe | None = None,
-            modules: tuple | None = None,
-            beacon: Beacon | None = None
-        ):
+        self,
+        quality: int,
+        recipe: Recipe | None = None,
+        modules: tuple | None = None,
+        beacon: Beacon | None = None,
+    ):
         """Initialize a new Foundry."""
         super().__init__(recipe=recipe, beacon=beacon)
         self._base_speed: float = SPEED_BY_QUALITY[quality]

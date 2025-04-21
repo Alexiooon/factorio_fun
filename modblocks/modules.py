@@ -1,4 +1,5 @@
 """Classes for all tiers of effectivity/productivity/quality/speed modules."""
+
 import json
 import os
 
@@ -21,14 +22,14 @@ def _load_json() -> dict:
         _MODULES = dict(json.load(_file))
 
 
-class Module():
+class Module:
     """Base class for all tiers and types of modules."""
 
-    energy_consumption = 0.
-    pollution = 0.
-    productivity = 0.
-    quality = 0.
-    speed = 0.
+    energy_consumption = 0.0
+    pollution = 0.0
+    productivity = 0.0
+    quality = 0.0
+    speed = 0.0
 
     def __init__(self, name: str, quality: QualityLevel):
         """Initialize module."""

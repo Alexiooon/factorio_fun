@@ -31,10 +31,10 @@ PRODUCTIVITY_OPTIONS = (
 )
 
 
-class ScienceSingleton():
+class ScienceSingleton:
     """Science progress tracker, using the singleton pattern as to only allow a single instance."""
 
-    class ScienceSingletonInstance():
+    class ScienceSingletonInstance:
         """Science progress tracker instance."""
 
         def __init__(self) -> None:
@@ -50,7 +50,7 @@ class ScienceSingleton():
             if not int(level) >= 0:
                 raise ValueError("Productivity level must be a positive integer.")
 
-        def load(self, science_dict: dict[str: int]) -> None:
+        def load(self, science_dict: dict[str:int]) -> None:
             """Set multiple science levels at once.
 
             Args:

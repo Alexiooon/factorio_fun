@@ -1,4 +1,5 @@
 """Module for setting crafting recipes."""
+
 import json
 import os
 from collections.abc import Mapping
