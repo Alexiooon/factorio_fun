@@ -6,6 +6,12 @@
         "output": {
             "Stone brick": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electric furnace",
         "time": 3.2
     },
@@ -16,6 +22,12 @@
         "output": {
             "Copper cable": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 0.5
     },
@@ -27,6 +39,12 @@
         "output": {
             "Electronic circuit": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 0.5
     },
@@ -39,6 +57,12 @@
         "output": {
             "Advanced circuit": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 6
     },
@@ -51,6 +75,12 @@
         "output": {
             "Processing unit": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 10
     },
@@ -62,6 +92,12 @@
         "output": {
             "Iron gear wheel": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 0.5
     },
@@ -70,12 +106,32 @@
             "Iron plate": 1
         },
         "output": {
-            "Iron gear wheel": 2
+            "Iron stick": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 0.5
     },
-
+    "Pipe": {
+        "input": {
+            "Iron plate": 1
+        },
+        "output": {
+            "Pipe": 1
+        },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
+        "station": "Assembling machine",
+        "time": 0.5
+    },
 
     "Inserter": {
         "input": {
@@ -86,6 +142,11 @@
         "output": {
             "Inserter": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 0.5
     },
@@ -97,6 +158,11 @@
         "output": {
             "Transport belt": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Foundry",
         "time": 0.5
     },
@@ -109,6 +175,11 @@
         "output": {
             "Grenade": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 8
     },
@@ -119,6 +190,11 @@
         "output": {
             "Firearm magazine": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 1
     },
@@ -131,6 +207,11 @@
         "output": {
             "Piercing rounds magazine": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 3
     },
@@ -141,6 +222,11 @@
         "output": {
             "Wall": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 0.5
     },
@@ -153,6 +239,12 @@
         "output": {
             "Sulfur": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Chemical plant",
         "time": 1
     },
@@ -165,6 +257,12 @@
         "output": {
             "Sulfuric acid": 50
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Chemical plant",
         "time": 1
     },
@@ -177,8 +275,14 @@
         "output": {
             "Battery": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Chemical plant",
-        "time": 1
+        "time": 4
     },
     "Plastic bar": {
         "input": {
@@ -188,6 +292,12 @@
         "output": {
             "Plastic bar": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Chemical plant",
         "time": 1
     },
@@ -201,6 +311,12 @@
         "output": {
             "Engine unit": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 10
     },
@@ -213,6 +329,12 @@
         "output": {
             "Electric engine unit": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 10
     },
@@ -226,6 +348,12 @@
         "output": {
             "Flying robot frame": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 20
     },
@@ -238,6 +366,12 @@
         "output": {
             "Low density structure": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 15
     },
@@ -251,6 +385,11 @@
         "output": {
             "Rail": 2
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 0.5
     },
@@ -263,6 +402,11 @@
         "output": {
             "Electric furnace": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 5
     },
@@ -274,6 +418,11 @@
         "output": {
             "Productivity module": 1
         },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 15
     },
@@ -287,6 +436,12 @@
         "output": {
             "Automation science pack": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 5.0
     },
@@ -298,6 +453,12 @@
         "output": {
             "Logistic science pack": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 6.0
     },
@@ -310,6 +471,12 @@
         "output": {
             "Military science pack": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 10.0
     },
@@ -322,6 +489,12 @@
         "output": {
             "Chemical science pack": 2
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 24.0
     },
@@ -334,6 +507,12 @@
         "output": {
             "Production science pack": 3
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 21.0
     },
@@ -346,6 +525,12 @@
         "output": {
             "Utility science pack": 3
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 21.0
     },
@@ -358,6 +543,12 @@
         "output": {
             "Space science pack": 5
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Assembling machine",
         "time": 15.0
     },
@@ -367,6 +558,12 @@
         "output": {
             "Metallurgic science pack": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Foundry",
         "time": 10.0
     },
@@ -376,6 +573,12 @@
         "output": {
             "Agricultural science pack": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Biochamber",
         "time": 4.0
     },
@@ -385,6 +588,12 @@
         "output": {
             "Electromagnetic science pack": 1
         },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
         "station": "Electromagnetic plant",
         "time": 10.0
     }
