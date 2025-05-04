@@ -427,6 +427,128 @@
         "time": 15
     },
 
+    "Holmium solution" : {
+        "input": {
+            "Holmium ore": 2,
+            "Stone": 1,
+            "Water": 10
+        },
+        "output": {
+            "Holmium solution": 100
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "speed"
+        ],
+        "station": "Chemical plant",
+        "time": 10.0
+    },
+    "Electrolyte" : {
+        "input": {
+            "Stone": 1,
+            "Heavy oil": 10,
+            "Holmium solution": 10
+        },
+        "output": {
+            "Electrolyte": 10
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Electromagnetic plant",
+        "time": 5.0
+    },
+    "Holmium plate" : {
+        "input": {
+            "Holmium solution": 20
+        },
+        "output": {
+            "Holmium plate": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Foundry",
+        "time": 1.0
+    },
+    "Superconductor" : {
+        "input": {
+            "Copper plate": 1,
+            "Plastic bar": 1,
+            "Holmium plate": 1,
+            "Light oil": 5
+        },
+        "output": {
+            "Superconductor": 2
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Electromagnetic plant",
+        "time": 5.0
+    },
+    "Supercapacitor" : {
+        "input": {
+            "Battery": 1,
+            "Electronic circuit": 4,
+            "Holmium plate": 2,
+            "Superconductor": 2,
+            "Electrolyte": 10
+        },
+        "output": {
+            "Supercapacitor": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Electromagnetic plant",
+        "time": 10.0
+    },
+    "Accumulator" : {
+        "input": {
+            "Battery": 5,
+            "Iron plate": 2
+        },
+        "output": {
+            "Accumulator": 1
+        },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
+        "station": "Electromagnetic plant",
+        "time": 10.0
+    },
+    "Light oil" : {
+        "input": {
+            "Heavy oil": 40,
+            "Water": 30
+        },
+        "output": {
+            "Light oil": 30
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "speed"
+        ],
+        "station": "Chemical plant",
+        "time": 2.0
+    },
 
     "Automation science pack": {
         "input": {
@@ -584,6 +706,10 @@
     },
     "Electromagnetic science pack": {
         "input": {
+            "Accumulator": 1,
+            "Electrolyte": 25,
+            "Holmium solution": 25,
+            "Supercapacitor": 1
         },
         "output": {
             "Electromagnetic science pack": 1
