@@ -550,6 +550,95 @@
         "time": 2.0
     },
 
+    "Molten iron": {
+        "input": {
+            "Lava": 500,
+            "Calcite": 1
+        },
+        "output": {
+            "Molten iron": 250,
+            "Stone": 10
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Foundry",
+        "time": 16.0
+    },
+    "Molten copper": {
+        "input": {
+            "Lava": 500,
+            "Calcite": 1
+        },
+        "output": {
+            "Molten copper": 250,
+            "Stone": 15
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Foundry",
+        "time": 16.0
+    },
+    "Carbon": {
+        "input": {
+            "Coal": 2,
+            "Sulfuric acid": 20
+        },
+        "output": {
+            "Carbon": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Chemical plant",
+        "time": 1.0
+    },
+    "Tungsten carbide": {
+        "input": {
+            "Sulfuric acid": 10,
+            "Carbon": 1,
+            "Tungsten ore": 2
+        },
+        "output": {
+            "Tungsten carbide": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Assembling machine",
+        "time": 1.0
+    },
+    "Tungsten plate": {
+        "input": {
+            "Molten iron": 10,
+            "Tungsten ore": 4
+        },
+        "output": {
+            "Tungsten plate": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Foundry",
+        "time": 10.0
+    },
+
     "Automation science pack": {
         "input": {
             "Copper plate": 1,
@@ -676,6 +765,9 @@
     },
     "Metallurgic science pack": {
         "input": {
+            "Molten copper": 200,
+            "Tungsten carbide": 3,
+            "Tungsten plate": 2
         },
         "output": {
             "Metallurgic science pack": 1
