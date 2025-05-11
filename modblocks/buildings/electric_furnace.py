@@ -1,8 +1,8 @@
 """Module for furnace."""
 
+from ..recipe import Recipe
 from .beacon import Beacon
 from .crafting_station import BaseCraftingStation
-from .recipe import Recipe
 
 SPEED_BY_QUALITY = (2.0, 2.6, 3.2, 3.8, 5.0)
 

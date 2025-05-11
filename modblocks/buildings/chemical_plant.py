@@ -1,14 +1,14 @@
-"""Module for foundries."""
+"""Module for chemical plants."""
 
+from ..recipe import Recipe
 from .beacon import Beacon
 from .crafting_station import BaseCraftingStation
-from .recipe import Recipe
 
-SPEED_BY_QUALITY = (4.0, 5.2, 6.4, 7.6, 10.0)
+SPEED_BY_QUALITY = (1.0, 1.3, 1.6, 1.9, 2.5)
 
 
-class Foundry(BaseCraftingStation):
-    """Foundry class."""
+class ChemicalPlant(BaseCraftingStation):
+    """Chemical plant class."""
 
     def __init__(
         self,
@@ -17,15 +17,15 @@ class Foundry(BaseCraftingStation):
         modules: tuple | None = None,
         beacon: Beacon | None = None,
     ):
-        """Initialize a new Foundry."""
+        """Initialize a new Chemical plant."""
         super().__init__(recipe=recipe, beacon=beacon)
         self._base_speed: float = SPEED_BY_QUALITY[quality]
-        self._base_prod: float = 1.5
-        self._module_slots: int = 4
+        self._base_prod: float = 1.0
+        self._module_slots: int = 3
         self._modules = [None] * self._module_slots
         if modules:
             self.modules = modules
 
     def __str__(self) -> str:
         """String representation i.e. name of the crafting station."""
-        return "Foundry"
+        return "Chemical Plant"

@@ -1,6 +1,6 @@
 """Beacon module."""
 
-from .modules import Module
+from ..modules import Module
 
 EFFICIENCY_BY_QUALITY = (1.5, 1.7, 1.9, 2.1, 2.5)
 

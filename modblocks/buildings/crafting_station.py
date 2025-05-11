@@ -1,9 +1,9 @@
 """Base object for generic crafting station."""
 
+from ..modules import Module
+from ..recipe import Recipe
+from ..science import GlobalScienceProgress
 from .beacon import Beacon
-from .modules import Module
-from .recipe import Recipe
-from .science import GlobalScienceProgress
 
 
 class BaseCraftingStation:
