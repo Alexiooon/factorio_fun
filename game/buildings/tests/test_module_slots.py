@@ -2,8 +2,8 @@
 
 import unittest
 
-from modblocks import Module
-from modblocks.buildings import BaseCraftingStation
+from game import Module
+from game.buildings import BaseCraftingStation
 
 
 class ModuleSlotsTestCase(unittest.TestCase):
