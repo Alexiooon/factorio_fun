@@ -639,6 +639,93 @@
         "time": 10.0
     },
 
+    "Ice": {
+        "input": {
+            "Ammoniacal solution": 50,
+            "Tungsten ore": 4
+        },
+        "output": {
+            "Ice": 5,
+            "Ammonia": 50
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Cryogenic plant",
+        "time": 1
+    },
+    "Lithium": {
+        "input": {
+            "Holmium plate": 1,
+            "Ammonia": 50,
+            "Lithium brine": 50
+        },
+        "output": {
+            "Lithium": 5
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Cryogenic plant",
+        "time": 20
+    },
+    "Lithium plate": {
+        "input": {
+            "Lithium": 1
+        },
+        "output": {
+            "Lithium plate": 1
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Electric furnace",
+        "time": 6.4
+    },
+    "Fluoroketone (hot)": {
+        "input": {
+            "Lithium": 1,
+            "Solid fuel": 1,
+            "Fluorine": 50,
+            "Ammonia": 50
+        },
+        "output": {
+            "Fluoroketone (hot)": 50
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Cryogenic plant",
+        "time": 10.0
+    },
+    "Fluoroketone (cold)": {
+        "input": {
+            "Fluoroketone (hot)": 10
+        },
+        "output": {
+            "Fluoroketone (cold)": 10
+        },
+        "modules": [
+            "efficiency",
+            "quality",
+            "speed"
+        ],
+        "station": "Cryogenic plant",
+        "time": 5.0
+    },
+
     "Automation science pack": {
         "input": {
             "Copper plate": 1,
@@ -814,5 +901,26 @@
         ],
         "station": "Electromagnetic plant",
         "time": 10.0
+    },
+    "Cryogenic science pack": {
+        "input": {
+            "Ice": 3,
+            "Lithium plate": 1,
+            "Fluoroketone (cold)": 6
+        },
+        "output": {
+            "Cryogenic science pack": 1
+        },
+        "waste": {
+            "Fluoroketone (hot)": 3
+        },
+        "modules": [
+            "efficiency",
+            "productivity",
+            "quality",
+            "speed"
+        ],
+        "station": "Cryogenic plant",
+        "time": 20.0
     }
 }
