@@ -6,4 +6,4 @@
 **/.ruff_cache
 
 # Output files
-output/**
+**_out/
