@@ -27,5 +27,6 @@ class AssemblingMachine(BaseCraftingStation):
             self.modules = modules
 
     def __str__(self) -> str:
-        """String representation i.e. name of the crafting station."""
-        return "Assembling machine 3"
+        """String representation i.e. name of the crafting station + recipe."""
+        recipe = str(self.recipe) if self.recipe is not None else "Empty"
+        return "Assembling machine 3: " + recipe

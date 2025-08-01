@@ -27,5 +27,6 @@ class CryogenicPlant(BaseCraftingStation):
             self.modules = modules
 
     def __str__(self) -> str:
-        """String representation i.e. name of the crafting station."""
-        return "Cryogenic plant"
+        """String representation i.e. name of the crafting station + recipe."""
+        recipe = str(self.recipe) if self.recipe is not None else "Empty"
+        return "Cryogenic plant: " + recipe

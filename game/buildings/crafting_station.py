@@ -61,7 +61,7 @@ class BaseCraftingStation:
 
     @property
     def productivity(self) -> float:
-        """Effective productivity.
+        """Effective productivity with a maximum of 4.0 (400 %).
 
         Note that this is a property without a setter, since its calculated automatically
         given base productivity, modules etc.
@@ -70,7 +70,7 @@ class BaseCraftingStation:
             GlobalScienceProgress.get_research_level(self.recipe.name) / 10
         )  # 10% / level
         prod_modules = sum(module.productivity for module in self._modules if module is not None)
-        return self._base_prod + prod_modules + prod_science
+        return min(self._base_prod + prod_modules + prod_science, 4.0)
 
     @property
     def input(self) -> dict:

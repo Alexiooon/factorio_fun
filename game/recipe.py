@@ -67,6 +67,10 @@ class Recipe(Mapping):
         """Length of recipe dictionary."""
         return len(self.recipe.keys())
 
+    def __str__(self):
+        """Name of the recipe."""
+        return self.name
+
     @property
     def recipe(self) -> dict:
         """Return current recipe."""

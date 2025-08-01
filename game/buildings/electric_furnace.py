@@ -27,5 +27,6 @@ class ElectricFurnace(BaseCraftingStation):
             self.modules = modules
 
     def __str__(self) -> str:
-        """String representation i.e. name of the crafting station."""
-        return "Electric furnace"
+        """String representation i.e. name of the crafting station + recipe."""
+        recipe = str(self.recipe) if self.recipe is not None else "Empty"
+        return "Electric furnace: " + recipe
