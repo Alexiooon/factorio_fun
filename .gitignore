@@ -1,2 +1,9 @@
+# Environment
+**.vscode/
+
+# Python & Ruff (linter)
 **/__pycache__
-.vscode/*
+**/.ruff_cache
+
+# Output files
+output/**
