@@ -3,6 +3,7 @@
 import logging
 import math
 import os
+import time
 
 import graphviz
 
@@ -69,3 +70,4 @@ def visualize(graph: CraftingGraph, filename: str = "graph"):
     filename = os.path.join(OUTPUT_PATH, filename)
     dot.render(filename=filename, view="dot")
     _logger.info("Graph saved to %s", filename)
+    time.sleep(0.2)

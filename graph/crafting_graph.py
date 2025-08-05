@@ -38,7 +38,3 @@ class CraftingGraph(nx.MultiDiGraph):
             raise TypeError("Node must be an instance of BaseCraftingStation or its subclasses")
 
         return super().add_nodes_from(nodes_for_adding, **attr)
-
-    def reduce():
-        """Compile down nodes."""
-        raise NotImplementedError("Not yet implemented!")
