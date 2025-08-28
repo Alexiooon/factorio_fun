@@ -7,6 +7,7 @@ from game.buildings import (
     AssemblingMachine,
     BaseCraftingStation,
     Beacon,
+    Biochamber,
     ChemicalPlant,
     CryogenicPlant,
     ElectricFurnace,
@@ -23,7 +24,7 @@ SM3Rare = Module("Speed module 3", QualityLevel.RARE)
 SM3Epic = Module("Speed module 3", QualityLevel.EPIC)
 BEACON = Beacon(quality=QualityLevel.EPIC, modules=(SM3Epic,) * 2, quantity=2)
 
-PLANETS = ["Nauvis", "Fulgora", "Vulcanus", "Aquillo"]
+PLANETS = ["Nauvis", "Fulgora", "Vulcanus", "Gleba", "Aquillo"]
 
 INPUT_ITEMS = {
     "Nauvis": [
@@ -51,6 +52,10 @@ INPUT_ITEMS = {
         "Heavy oil",
         "Water",
     ],
+    "Gleba": [
+        "Bioflux",
+        "Pentapod egg",
+    ],
     "Vulcanus": [
         "Lava",
         "Calcite",
@@ -70,6 +75,7 @@ INPUT_ITEMS = {
 
 CRAFTING_STATION: dict[str:BaseCraftingStation] = {
     "Assembling machine": AssemblingMachine,
+    "Biochamber": Biochamber,
     "Chemical plant": ChemicalPlant,
     "Cryogenic plant": CryogenicPlant,
     "Electric furnace": ElectricFurnace,
@@ -88,6 +94,7 @@ SCIENCE_TYPES = {
     ],
     "Fulgora": ["Electromagnetic science pack"],
     "Vulcanus": ["Metallurgic science pack"],
+    "Gleba": ["Agricultural science pack"],
     "Aquillo": ["Cryogenic science pack"],
 }
 
