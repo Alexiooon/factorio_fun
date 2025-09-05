@@ -1,4 +1,4 @@
-"""Recursively delve through a crafting path to calculate input quantities."""
+"""Tools to generate and manipulate crafting graphs."""
 
 import copy
 from collections import Counter

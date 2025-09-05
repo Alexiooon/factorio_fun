@@ -1,4 +1,7 @@
-"""Graph representation."""
+"""Graph representation of sequences of crafting stations.
+
+Utilizes the networkx module.
+"""
 
 # TODO (Alex): Expand docstring
 from typing import Iterable
