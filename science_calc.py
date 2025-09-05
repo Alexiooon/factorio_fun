@@ -1,29 +1,25 @@
 """Script for calculating base resources needed for making science packs."""
 
+import argparse
 import json
 
-from game import GlobalScienceProgress, Module, QualityLevel, Recipe
-from game.buildings import (
-    AssemblingMachine,
-    BaseCraftingStation,
-    Beacon,
-    ChemicalPlant,
-    CryogenicPlant,
-    ElectricFurnace,
-    ElectromagneticPlant,
-    Foundry,
-)
+from game import GlobalScienceProgress, Module, QualityLevel
+from game.buildings import Beacon
+from graph import CraftingGraph, generate_graph, visualize
 
 TARGET_RATE = 10000 / 60  # Science packs per second per type
 SCIENCE_PROGRESS_FILE = "science_progress.json"
 
-PM2Rare = Module("Productivity module 2", QualityLevel.RARE)
-PM3Epic = Module("Productivity module 3", QualityLevel.EPIC)
-SM3Rare = Module("Speed module 3", QualityLevel.RARE)
 SM3Epic = Module("Speed module 3", QualityLevel.EPIC)
 BEACON = Beacon(quality=QualityLevel.EPIC, modules=(SM3Epic,) * 2, quantity=2)
 
-PLANETS = ["Nauvis", "Fulgora", "Vulcanus", "Aquillo"]
+PLANETS = [
+    "Nauvis",
+    "Fulgora",
+    "Vulcanus",
+    "Aquillo",
+]
+
 
 INPUT_ITEMS = {
     "Nauvis": [
@@ -68,14 +64,6 @@ INPUT_ITEMS = {
     ],
 }
 
-CRAFTING_STATION: dict[str:BaseCraftingStation] = {
-    "Assembling machine": AssemblingMachine,
-    "Chemical plant": ChemicalPlant,
-    "Cryogenic plant": CryogenicPlant,
-    "Electric furnace": ElectricFurnace,
-    "Electromagnetic plant": ElectromagneticPlant,
-    "Foundry": Foundry,
-}
 
 SCIENCE_TYPES = {
     "Nauvis": [
@@ -92,64 +80,33 @@ SCIENCE_TYPES = {
 }
 
 
-def generate_graph(
-    name: str,
-    output_quantity: float,
-    output_dict: dict[str:float],
-    station_count: dict[str:float],
-    planet: str,
-):
-    """Recursively generate a graph of input items."""
-    # Define the stuff
-    recipe = Recipe(name=name)
-    station_name = recipe.recipe["station"]
-    crafting_station = CRAFTING_STATION[station_name](
-        quality=QualityLevel.EPIC, recipe=recipe, beacon=BEACON
-    )
-    modules = (PM3Epic,) if "productivity" in recipe.recipe["modules"] else (SM3Epic,)
-    crafting_station.modules = modules * len(crafting_station.modules)
-
-    # Calculate the amount of crafting stations needed
-    factor = output_quantity / crafting_station.output[name]
-    if name not in station_count:
-        station_count[name] = 0.0
-    station_count[name] += factor
-
-    # Calculate the input flows
-    for item in crafting_station.input:
-        ingredient_quantity = crafting_station.input[item] * factor
-
-        if item not in INPUT_ITEMS[planet]:  # Delve deeper into the recipe graph
-            generate_graph(
-                name=item,
-                output_quantity=ingredient_quantity,
-                output_dict=output_dict,
-                station_count=station_count,
-                planet=planet,
-            )
-        else:  # Append into the total inputs
-            if item not in output_dict:
-                output_dict[item] = 0.0
-            output_dict[item] += ingredient_quantity
-
-
-def do_science(name: str, planet: str) -> dict:
+def do_science(name: str, planet: str) -> CraftingGraph:
     """Big think."""
-    local_input = {}  # Updated within generate_graph
-    station_count = {}  # Updated within generate_graph
-    print(f"\n========== {name} ==========")
-    generate_graph(name, TARGET_RATE, local_input, station_count, planet)
-    print("Input:")
-    for key, val in local_input.items():
-        print(f"  {key}: {val:.1f}/s")
-    print("Crafting stations:")
-    for key, val in station_count.items():
-        print(f"  {key}: {val:.1f}")
-    return local_input
+    graph = generate_graph(name, TARGET_RATE, INPUT_ITEMS[planet], BEACON, reduce=True)
+
+    return graph
+
+
+def get_args() -> argparse.Namespace:
+    """Get input arguments."""
+    args = argparse.ArgumentParser()
+
+    args.add_argument(
+        "--draw",
+        "-d",
+        action="store_true",
+        required=False,
+        default=False,
+        help="Generate graphviz visualization",
+    )
+
+    return args.parse_args()
 
 
 def main():
     """Main entry point for the script."""
+    args = get_args()
+
     # Set research levels for bonus productivity
     with open(SCIENCE_PROGRESS_FILE, "r", encoding="utf8") as _file:
         dat = json.load(_file)
@@ -159,9 +116,14 @@ def main():
     for planet in PLANETS:
         global_input = {item: 0.0 for item in INPUT_ITEMS[planet]}
         for science_pack in SCIENCE_TYPES[planet]:
-            local_input = do_science(science_pack, planet)
-            for name, flow in local_input.items():
-                global_input[name] += flow
+            graph = do_science(science_pack, planet)
+
+            if args.draw:
+                visualize(graph)
+
+            for node, data in graph.nodes.items():
+                for item in global_input:
+                    global_input[item] += node.input.get(item, 0) * data.get("stations")
 
         # Print the summary
         print(f"\n\n========== Summary {planet} ==========")
