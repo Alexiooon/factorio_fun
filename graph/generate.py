@@ -8,6 +8,7 @@ from game.buildings import (
     AssemblingMachine,
     BaseCraftingStation,
     Beacon,
+    Biochamber,
     ChemicalPlant,
     CryogenicPlant,
     ElectricFurnace,
@@ -19,6 +20,7 @@ from .crafting_graph import CraftingGraph
 
 _CRAFTING_STATION: dict[str:BaseCraftingStation] = {
     "Assembling machine": AssemblingMachine,
+    "Biochamber": Biochamber,
     "Chemical plant": ChemicalPlant,
     "Cryogenic plant": CryogenicPlant,
     "Electric furnace": ElectricFurnace,

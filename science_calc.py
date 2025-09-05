@@ -17,9 +17,9 @@ PLANETS = [
     "Nauvis",
     "Fulgora",
     "Vulcanus",
+    "Gleba",
     "Aquillo",
 ]
-
 
 INPUT_ITEMS = {
     "Nauvis": [
@@ -46,6 +46,10 @@ INPUT_ITEMS = {
         "Stone",
         "Heavy oil",
         "Water",
+    ],
+    "Gleba": [
+        "Bioflux",
+        "Pentapod egg",
     ],
     "Vulcanus": [
         "Lava",
@@ -76,6 +80,7 @@ SCIENCE_TYPES = {
     ],
     "Fulgora": ["Electromagnetic science pack"],
     "Vulcanus": ["Metallurgic science pack"],
+    "Gleba": ["Agricultural science pack"],
     "Aquillo": ["Cryogenic science pack"],
 }
 

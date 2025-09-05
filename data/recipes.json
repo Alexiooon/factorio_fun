@@ -870,6 +870,8 @@
     },
     "Agricultural science pack": {
         "input": {
+            "Bioflux": 1,
+            "Pentapod egg": 1
         },
         "output": {
             "Agricultural science pack": 1
